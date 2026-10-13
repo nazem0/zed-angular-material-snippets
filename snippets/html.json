@@ -1,0 +1,727 @@
+{
+  "matAutoComplete": {
+    "prefix": "a-md-auto-complete",
+    "body": [
+      "<mat-form-field>",
+      "\t<mat-label>${1:label}</mat-label>",
+      "\t<input matInput [matAutocomplete]=\"auto\" [formControl]=\"${2:control}\">",
+      "\t<mat-autocomplete #auto=\"matAutocomplete\">",
+      "\t\t@for (${4:item} of ${3:options} | async; track ${4:item}) {",
+      "\t\t\t<mat-option [value]=\"${4:item}\">{{${4:item}}}</mat-option>",
+      "\t\t}",
+      "\t</mat-autocomplete>",
+      "</mat-form-field>"
+    ],
+    "description": "<mat-autocomplete> control with @for"
+  },
+  "matBadge": {
+    "prefix": "a-md-badge",
+    "body": [
+      "matBadge=\"${1:value}\" matBadgePosition=\"${2:above after}\" matBadgeColor=\"${3:primary}\"",
+      "matBadgeSize=\"${4:size}\" matBadgeOverlap=\"${5:overlap}\" matBadgeHidden=\"${6:hidden}\""
+    ],
+    "description": "matBadge with configuration"
+  },
+  "matBadgeButton": {
+    "prefix": "a-md-badge-button",
+    "body": [
+      "<button matButton=\"elevated\"",
+      "\t\tmatBadge=\"${1:value}\" matBadgePosition=\"${2:above after}\"",
+      "\t\tmatBadgeColor=\"${3:primary}\">${4:title}",
+      "</button>"
+    ],
+    "description": "matBadge on button control"
+  },
+  "matButton": {
+    "prefix": "a-md-button",
+    "body": ["<button matButton>${1:value}</button>"],
+    "description": "matButton control"
+  },
+  "matButtonLink": {
+    "prefix": "a-md-button-link",
+    "body": ["<a matButton routerLink=\"${2:link}\">${1:value}</a>"],
+    "description": "matButton control with routerLink"
+  },
+  "matButtonRaised": {
+    "prefix": "a-md-raised-button",
+    "body": ["<button matButton=\"elevated\">${1:value}</button>"],
+    "description": "matButton elevated control"
+  },
+  "matButtonToggles": {
+    "prefix": "a-md-button-toggles",
+    "body": [
+      "<mat-button-toggle-group aria-label=\"${1:label}\">",
+      "\t<mat-button-toggle value=\"${2:value}\">${2:value}</mat-button-toggle>",
+      "</mat-button-toggle-group>"
+    ],
+    "description": "mat-button-toggle-group control"
+  },
+  "matButtonWithIcon": {
+    "prefix": "a-md-icon-button",
+    "body": [
+      "<button matIconButton aria-label=\"${2:label}\">",
+      "\t<mat-icon>${1:icon}</mat-icon>",
+      "</button>"
+    ],
+    "description": "matIconButton control"
+  },
+  "matBottomSheetTrigger": {
+    "prefix": "a-md-bottom-sheet",
+    "body": [
+      "<button matButton=\"elevated\" (click)=\"${1:openBottomSheet}()\">${2:Open bottom sheet}</button>"
+    ],
+    "description": "MatBottomSheet trigger button"
+  },
+  "matBottomSheetContent": {
+    "prefix": "a-md-bottom-sheet-content",
+    "body": [
+      "<mat-nav-list>",
+      "\t<a href=\"${1:url}\" mat-list-item (click)=\"${2:openLink}($event)\">",
+      "\t\t<span matListItemTitle>${3:title}</span>",
+      "\t\t<span matListItemLine>${4:description}</span>",
+      "\t</a>",
+      "</mat-nav-list>"
+    ],
+    "description": "MatBottomSheet content with list item"
+  },
+  "matCard": {
+    "prefix": "a-md-card",
+    "body": [
+      "<mat-card appearance=\"outlined\">",
+      "\t<mat-card-header>",
+      "\t\t<div mat-card-avatar>${1:avatar}</div>",
+      "\t\t<mat-card-title>${2:title}</mat-card-title>",
+      "\t\t<mat-card-subtitle>${3:sub-header}</mat-card-subtitle>",
+      "\t</mat-card-header>",
+      "\t<mat-card-content>",
+      "\t\t${4:content}",
+      "\t</mat-card-content>",
+      "\t<mat-card-actions>",
+      "\t\t<button matButton>${5:actionOne}</button>",
+      "\t\t<button matButton>${6:actionTwo}</button>",
+      "\t\t</mat-card-actions>",
+      "</mat-card>"
+    ],
+    "description": "<mat-card> control, Basic card"
+  },
+  "matCardSimple": {
+    "prefix": "a-md-card-simple",
+    "body": ["<mat-card>", "\t${1:content}", "</mat-card>"],
+    "description": "<mat-card> control, Simple card"
+  },
+  "matCheckboxNg": {
+    "prefix": "a-md-checkbox",
+    "body": [
+      "<mat-checkbox [(ngModel)]=\"${1:model}\">Check me!</mat-checkbox>"
+    ],
+    "description": "<mat-checkbox> control with ngModel"
+  },
+  "matCheckboxFc": {
+    "prefix": "a-md-checkbox-fc",
+    "body": [
+      "<mat-checkbox formControlName=\"${1:model}\">Check me!</mat-checkbox>"
+    ],
+    "description": "<mat-checkbox> control with formControlName"
+  },
+  "matDialogTrigger": {
+    "prefix": "a-md-dialog",
+    "body": [
+      "<button matButton=\"elevated\" (click)=\"${1:openDialog}()\">${2:Open dialog}</button>"
+    ],
+    "description": "MatDialog trigger button"
+  },
+  "matDialogContent": {
+    "prefix": "a-md-dialog-content",
+    "body": [
+      "<h2 mat-dialog-title>${1:title}</h2>",
+      "<mat-dialog-content>",
+      "\t${2:content}",
+      "</mat-dialog-content>",
+      "<mat-dialog-actions>",
+      "\t<button matButton mat-dialog-close>${3:Cancel}</button>",
+      "\t<button matButton [mat-dialog-close]=\"${4:result}\" cdkFocusInitial>${5:Ok}</button>",
+      "</mat-dialog-actions>"
+    ],
+    "description": "MatDialog content with actions"
+  },
+  "matDatepicker": {
+    "prefix": "a-md-datepicker",
+    "body": [
+      "<mat-form-field>",
+      "\t<mat-label>${1:Choose a date}</mat-label>",
+      "\t<input matInput [matDatepicker]=\"picker\">",
+      "\t<mat-hint>${2:MM/DD/YYYY}</mat-hint>",
+      "\t<mat-datepicker-toggle matIconSuffix [for]=\"picker\"></mat-datepicker-toggle>",
+      "\t<mat-datepicker #picker></mat-datepicker>",
+      "</mat-form-field>"
+    ],
+    "description": "<mat-datepicker> control"
+  },
+  "matDateRangePicker": {
+    "prefix": "a-md-date-range-picker",
+    "body": [
+      "<mat-form-field>",
+      "\t<mat-label>${1:Enter a date range}</mat-label>",
+      "\t<mat-date-range-input [rangePicker]=\"picker\">",
+      "\t\t<input matStartDate placeholder=\"${2:Start date}\">",
+      "\t\t<input matEndDate placeholder=\"${3:End date}\">",
+      "\t</mat-date-range-input>",
+      "\t<mat-hint>${4:MM/DD/YYYY - MM/DD/YYYY}</mat-hint>",
+      "\t<mat-datepicker-toggle matIconSuffix [for]=\"picker\"></mat-datepicker-toggle>",
+      "\t<mat-date-range-picker #picker></mat-date-range-picker>",
+      "</mat-form-field>"
+    ],
+    "description": "<mat-date-range-picker> control"
+  },
+  "matDivider": {
+    "prefix": "a-md-divider",
+    "body": ["<mat-divider></mat-divider>"],
+    "description": "mat-divider control"
+  },
+  "matDividerInset": {
+    "prefix": "a-md-inset-divider",
+    "body": ["<mat-divider [inset]=\"true\"></mat-divider>"],
+    "description": "mat-divider control configured inset"
+  },
+  "matExpansionPanel": {
+    "prefix": "a-md-ex-panel",
+    "body": [
+      "<mat-expansion-panel>",
+      "\t<mat-expansion-panel-header>",
+      "\t\t<mat-panel-title>",
+      "\t\t\t${1:title}",
+      "\t\t</mat-panel-title>",
+      "\t\t<mat-panel-description>",
+      "\t\t\t${2:description}",
+      "\t\t</mat-panel-description>",
+      "\t</mat-expansion-panel-header>",
+      "\t${3:panel-content}",
+      "</mat-expansion-panel>"
+    ],
+    "description": "<mat-expansion-panel> control for expandable details-summary view"
+  },
+  "matFab": {
+    "prefix": "a-md-fab",
+    "body": [
+      "<button matFab aria-label=\"${2:label}\">",
+      "\t<mat-icon>${1:icon}</mat-icon>",
+      "</button>"
+    ],
+    "description": "matFab control"
+  },
+  "matFabMini": {
+    "prefix": "a-md-fab-mini",
+    "body": [
+      "<button matMiniFab aria-label=\"${2:label}\">",
+      "\t<mat-icon>${1:icon}</mat-icon>",
+      "</button>"
+    ],
+    "description": "matMiniFab control"
+  },
+  "matGrid": {
+    "prefix": "a-md-grid",
+    "body": [
+      "<mat-grid-list cols=\"${1:col}\" rowHeight=\"${2:column-width}:${3:row-height}\">",
+      "\t<mat-grid-tile>1</mat-grid-tile>",
+      "\t<mat-grid-tile>2</mat-grid-tile>",
+      "\t<mat-grid-tile>3</mat-grid-tile>",
+      "\t<mat-grid-tile>4</mat-grid-tile>",
+      "</mat-grid-list>"
+    ],
+    "description": "<mat-grid-list> control for grid-based layout"
+  },
+  "matGridTile": {
+    "prefix": "a-md-grid-tile",
+    "body": ["<mat-grid-tile>${1:content}</mat-grid-tile>"],
+    "description": "<mat-grid-tile> Grid tile for <mat-grid-list> control"
+  },
+  "matFormField": {
+    "prefix": "a-md-form-field",
+    "body": [
+      "<mat-form-field>",
+      "\t<mat-label>${1:label}</mat-label>",
+      "\t${2:control}",
+      "\t<mat-hint>${3:hint}</mat-hint>",
+      "</mat-form-field>"
+    ],
+    "description": "<mat-form-field> wrapper"
+  },
+  "matInput": {
+    "prefix": "a-md-input",
+    "body": [
+      "<mat-form-field>",
+      "\t<mat-label>${1:label}</mat-label>",
+      "\t<input matInput placeholder=\"${2:placeholder}\">",
+      "</mat-form-field>"
+    ],
+    "description": "matInput control"
+  },
+  "matInputError": {
+    "prefix": ["a-md-input-error", "a-md-input-err"],
+    "body": ["<mat-error>", "\t${1:errMsg}", "</mat-error>"],
+    "description": "mat-error control for matInput"
+  },
+  "matInputwithIcon": {
+    "prefix": "a-md-input-icon",
+    "body": [
+      "<mat-form-field>",
+      "\t<mat-label>${1:label}</mat-label>",
+      "\t<input matInput placeholder=\"${2:placeholder}\">",
+      "\t<mat-icon matIconSuffix>${3:icon}</mat-icon>",
+      "</mat-form-field>"
+    ],
+    "description": "matInput control with icon suffixed"
+  },
+  "matInputNgModel": {
+    "prefix": "a-md-input-ngModel",
+    "body": [
+      "<mat-form-field>",
+      "\t<mat-label>${1:label}</mat-label>",
+      "\t<input matInput [(ngModel)]=\"${2:model}\" placeholder=\"${3:placeholder}\">",
+      "</mat-form-field>"
+    ],
+    "description": "matInput control with ngModel"
+  },
+  "matInputFc": {
+    "prefix": "a-md-input-fc",
+    "body": [
+      "<mat-form-field>",
+      "\t<mat-label>${1:label}</mat-label>",
+      "\t<input matInput formControlName=\"${2:control}\" placeholder=\"${3:placeholder}\">",
+      "</mat-form-field>"
+    ],
+    "description": "matInput control with formControlName"
+  },
+  "matMenu": {
+    "prefix": "a-md-menu",
+    "body": [
+      "<button matButton [matMenuTriggerFor]=\"menu\">Open</button>",
+      "<mat-menu #menu=\"matMenu\">",
+      "\t<button mat-menu-item>${1:item1}</button>",
+      "\t<button mat-menu-item>${2:item2}</button>",
+      "</mat-menu>"
+    ],
+    "description": "<mat-menu> with default items."
+  },
+  "matMenuWithIcon": {
+    "prefix": "a-md-menu-with-icon",
+    "body": [
+      "<button matIconButton [matMenuTriggerFor]=\"menu\" aria-label=\"${1:Open menu}\">",
+      "\t<mat-icon>more_vert</mat-icon>",
+      "</button>",
+      "<mat-menu #menu=\"matMenu\">",
+      "\t<button mat-menu-item>",
+      "\t\t<mat-icon>dialpad</mat-icon>",
+      "\t\t<span>Redial</span>",
+      "\t</button>",
+      "</mat-menu>"
+    ],
+    "description": "<mat-menu> with default items with icon."
+  },
+  "matMenuNested": {
+    "prefix": "a-md-menu-nested",
+    "body": [
+      "<button matButton [matMenuTriggerFor]=\"season\">Seasons</button>",
+      "<mat-menu #season=\"matMenu\">",
+      "\t<button mat-menu-item [matMenuTriggerFor]=\"got\">Game of throne</button>",
+      "\t<button mat-menu-item [matMenuTriggerFor]=\"siliconValley\">Silicon Valley</button>",
+      "</mat-menu>",
+      "\n<mat-menu #got=\"matMenu\">",
+      "\t<button mat-menu-item [matMenuTriggerFor]=\"seasonOne\">Season 1</button>",
+      "\t<button mat-menu-item>Season 2</button>",
+      "\t<button mat-menu-item>Season 3</button>",
+      "\t<button mat-menu-item>Season 4</button>",
+      "\t<button mat-menu-item>Season 5</button>",
+      "\t<button mat-menu-item>Season 6</button>",
+      "\t<button mat-menu-item>Season 7</button>",
+      "</mat-menu>",
+      "\n<mat-menu #seasonOne=\"matMenu\">",
+      "\t<button mat-menu-item>Winter Is Coming</button>",
+      "\t<button mat-menu-item>The Kingsroad</button>",
+      "\t<button mat-menu-item>Lord Snow</button>",
+      "\t<button mat-menu-item>Cripples, Bastards, and Broken Things</button>",
+      "</mat-menu>"
+    ],
+    "description": "Nested <mat-menu> with default items"
+  },
+  "matPaginator": {
+    "prefix": "a-md-paginator",
+    "body": [
+      "<mat-paginator [length]=\"${1:length}\"",
+      "\t\t\t[pageSize]=\"${2:size}\"",
+      "\t\t\t[pageSizeOptions]=\"[5, 10, 25, 100]\">",
+      "</mat-paginator>"
+    ],
+    "description": "<mat-paginator> control for pagination"
+  },
+  "matProgressBar": {
+    "prefix": "a-md-progress-bar",
+    "body": ["<mat-progress-bar mode=\"indeterminate\"></mat-progress-bar>"],
+    "description": "<mat-progress-bar> control with indeterminate mode. It could be 'indeterminate', 'determinate', 'buffer' or 'query'."
+  },
+  "matProgressSpinner": {
+    "prefix": "a-md-progress-spinner",
+    "body": [
+      "<mat-progress-spinner mode=\"indeterminate\"></mat-progress-spinner>"
+    ],
+    "description": "<mat-progress-spinner> control with indeterminate mode. It could be 'indeterminate' or 'determinate'."
+  },
+  "matRadio": {
+    "prefix": "a-md-radio",
+    "body": [
+      "<mat-radio-group>",
+      "\t<mat-radio-button value=\"${1:val}\">${1:val}</mat-radio-button>",
+      "\t<mat-radio-button value=\"${2:val}\">${2:val}</mat-radio-button>",
+      "</mat-radio-group>"
+    ],
+    "description": "<mat-radio-group> control with default <mat-radio-button>"
+  },
+  "matRadioBtn": {
+    "prefix": "a-md-radio-btn",
+    "body": [
+      "\t<mat-radio-button value=\"${1:val}\">${1:val}</mat-radio-button>"
+    ],
+    "description": "<mat-radio-button> button"
+  },
+  "matSelect": {
+    "prefix": "a-md-select",
+    "body": [
+      "<mat-form-field>",
+      "\t<mat-label>${1:label}</mat-label>",
+      "\t<mat-select>",
+      "\t\t<mat-option [value]=\"${2:value}\">${3:label}</mat-option>",
+      "\t</mat-select>",
+      "</mat-form-field>"
+    ],
+    "description": "<mat-select> control"
+  },
+  "matSelectOption": {
+    "prefix": "a-md-select-option",
+    "body": ["\t<mat-option [value]=\"${1:value}\">${2:label}</mat-option>"],
+    "description": "<mat-option> for <mat-select>"
+  },
+  "matSelectWithNgModel": {
+    "prefix": "a-md-select-ngModel",
+    "body": [
+      "<mat-form-field>",
+      "\t<mat-label>${1:label}</mat-label>",
+      "\t<mat-select [(ngModel)]=\"${2:model}\" name=\"${3:name}\">",
+      "\t\t@for (${5:item} of ${4:list}; track ${5:item}) {",
+      "\t\t\t<mat-option [value]=\"${5:item}\">{{${5:item}}}</mat-option>",
+      "\t\t}",
+      "\t</mat-select>",
+      "</mat-form-field>"
+    ],
+    "description": "<mat-select> control with ngModel"
+  },
+  "matSelectWithFc": {
+    "prefix": "a-md-select-fc",
+    "body": [
+      "<mat-form-field>",
+      "\t<mat-label>${1:label}</mat-label>",
+      "\t<mat-select formControlName=\"${2:control}\">",
+      "\t\t@for (${4:item} of ${3:list}; track ${4:item}) {",
+      "\t\t\t<mat-option [value]=\"${4:item}\">{{${4:item}}}</mat-option>",
+      "\t\t}",
+      "\t</mat-select>",
+      "</mat-form-field>"
+    ],
+    "description": "<mat-select> control with formControlName"
+  },
+  "matSlider": {
+    "prefix": "a-md-slider",
+    "body": ["<mat-slider>", "\t<input matSliderThumb>", "</mat-slider>"],
+    "description": "<mat-slider> control default horizontal"
+  },
+  "matSliderVertical": {
+    "prefix": "a-md-slider-vertical",
+    "body": [
+      "<mat-slider min=\"${1:0}\" max=\"${2:100}\" step=\"${3:1}\" discrete>",
+      "\t<input matSliderThumb>",
+      "</mat-slider>"
+    ],
+    "description": "<mat-slider> control with thumb input"
+  },
+  "matSwitch": {
+    "prefix": "a-md-switch",
+    "body": ["<mat-slide-toggle>Slide me!</mat-slide-toggle>"],
+    "description": "Switch<mat-slide-toggle> control"
+  },
+  "matSidenav": {
+    "prefix": "a-md-sidenav",
+    "body": [
+      "<mat-sidenav-container fullscreen>",
+      "\t<mat-sidenav #sidenav class=\"mat-elevation-z4\" mode=\"side\" opened=\"true\">",
+      "\t\t<mat-nav-list>",
+      "\t\t\t@for (${2:item} of ${1:list}; track ${2:item}) {",
+      "\t\t\t\t<mat-list-item>",
+      "\t\t\t\t\t<mat-icon matListItemIcon>{{${2:item}.icon}}</mat-icon>",
+      "\t\t\t\t\t<div matListItemTitle>{{${2:item}.label}}</div>",
+      "\t\t\t\t</mat-list-item>",
+      "\t\t\t}",
+      "\t\t</mat-nav-list>",
+      "\t</mat-sidenav>",
+      "\t<div class=\"container\">",
+      "\t</div>",
+      "</mat-sidenav-container>"
+    ],
+    "description": "<mat-sidenav> control with @for to iterate through nav items"
+  },
+  "matToolbar": {
+    "prefix": "a-md-toolbar",
+    "body": [
+      "<mat-toolbar color=\"primary\" class=\"mat-elevation-z6\">",
+      "\t<span>${1:title}</span>",
+      "</mat-toolbar>"
+    ],
+    "description": "Toolbar with primary color as default"
+  },
+  "matTab": {
+    "prefix": "a-md-tab",
+    "body": [
+      "<mat-tab-group>",
+      "\t<mat-tab label=\"Tab 1\">Content 1</mat-tab>",
+      "\t<mat-tab label=\"Tab 2\">Content 2</mat-tab>",
+      "</mat-tab-group>"
+    ],
+    "description": "<mat-tab> control with set of two tabs"
+  },
+  "matTooltip": {
+    "prefix": "a-md-tooltip",
+    "body": ["<span matTooltip=\"${1:text}\">Hover me to view tooltip</span>"],
+    "description": "matTooltip directive to display tooltip"
+  },
+  "matTooltipPosition": {
+    "prefix": "a-md-tooltip-position",
+    "body": ["matTooltipPosition=\"${1:position}\""],
+    "description": "matTooltipPosition directive to set position"
+  },
+  "matList": {
+    "prefix": "a-md-list",
+    "body": [
+      "<mat-list role=\"list\">",
+      "\t<mat-list-item role=\"listitem\">${1:item1}</mat-list-item>",
+      "\t<mat-list-item role=\"listitem\">${2:item2}</mat-list-item>",
+      "</mat-list>"
+    ],
+    "description": "<mat-list> control with default <mat-list-item>"
+  },
+  "matListItem": {
+    "prefix": "a-md-list-item",
+    "body": ["<mat-list-item role=\"listitem\">${1:item1}</mat-list-item>"],
+    "description": "<mat-list-item> control"
+  },
+  "matSelectionList": {
+    "prefix": "a-md-selection-list",
+    "body": [
+      "<mat-selection-list #${1:selection}>",
+      "\t@for (${3:option} of ${2:options}; track ${3:option}) {",
+      "\t\t<mat-list-option>{{${3:option}}}</mat-list-option>",
+      "\t}",
+      "</mat-selection-list>"
+    ],
+    "description": "<mat-selection-list> control"
+  },
+  "matListOption": {
+    "prefix": "a-md-list-option",
+    "body": ["<mat-list-option>${1:option}</mat-list-option>"],
+    "description": "<mat-list-option> control"
+  },
+  "matListWithIcon": {
+    "prefix": "a-md-icon-list",
+    "body": [
+      "<mat-list role=\"list\">",
+      "\t<mat-list-item role=\"listitem\">",
+      "\t\t<mat-icon matListItemIcon>${1:icon}</mat-icon>",
+      "\t\t<div matListItemTitle>${2:heading}</div>",
+      "\t\t<div matListItemLine>${3:content}</div>",
+      "\t</mat-list-item>",
+      "</mat-list>"
+    ],
+    "description": "<mat-list> control with icon"
+  },
+  "matRipple": {
+    "prefix": "a-md-ripple",
+    "body": ["matRipple [matRippleColor]=\"${1:color}\""],
+    "description": "matRipple and matRippleColor directives"
+  },
+  "matRippleContainer": {
+    "prefix": "a-md-ripple-container",
+    "body": ["<div matRipple [matRippleColor]=\"${1:color}\">", "\t", "</div>"],
+    "description": "Ripple container"
+  },
+  "matHorizontalStepper": {
+    "prefix": "a-md-stepper",
+    "body": [
+      "<mat-stepper [linear]=\"${1:isLinear}\" #stepper>",
+      "\t<mat-step [stepControl]=\"${2:formGroup}\">",
+      "\t\t<form></form>",
+      "\t\t<div>",
+      "\t\t\t<button matButton matStepperNext>Next</button>",
+      "\t\t</div>",
+      "\t</mat-step>",
+      "</mat-stepper>"
+    ],
+    "description": "<mat-stepper> control"
+  },
+  "matHorizontalStep": {
+    "prefix": "a-md-step",
+    "body": [
+      "<mat-step [stepControl]=\"${1:formGroup}\">",
+      "\t<form></form>",
+      "\t<div>",
+      "\t\t<button matButton matStepperPrevious>Back</button>",
+      "\t\t<button matButton matStepperNext>Next</button>",
+      "\t</div>",
+      "</mat-step>"
+    ],
+    "description": "<mat-step> control"
+  },
+  "matTree": {
+    "prefix": "a-md-tree",
+    "body": [
+      "<mat-tree #tree [dataSource]=\"${1:dataSource}\" [childrenAccessor]=\"${2:childrenAccessor}\">",
+      "\t<mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodePadding>",
+      "\t\t<button matIconButton disabled></button>",
+      "\t\t{{node.${3:name}}}",
+      "\t</mat-tree-node>",
+      "\t<mat-tree-node",
+      "\t\t*matTreeNodeDef=\"let node; when: ${4:hasChild}\"",
+      "\t\tmatTreeNodePadding",
+      "\t\tmatTreeNodeToggle",
+      "\t\t[cdkTreeNodeTypeaheadLabel]=\"node.${3:name}\"",
+      "\t>",
+      "\t\t<button matIconButton matTreeNodeToggle [attr.aria-label]=\"'Toggle ' + node.${3:name}\">",
+      "\t\t\t<mat-icon class=\"mat-icon-rtl-mirror\">",
+      "\t\t\t\t{{tree.isExpanded(node) ? 'expand_more' : 'chevron_right'}}",
+      "\t\t\t</mat-icon>",
+      "\t\t</button>",
+      "\t\t{{node.${3:name}}}",
+      "\t</mat-tree-node>",
+      "</mat-tree>"
+    ],
+    "description": "<mat-tree> control"
+  },
+  "matTreeNode": {
+    "prefix": "a-md-tree-node",
+    "body": [
+      "<mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodePadding>",
+      "\t<button matIconButton disabled></button>",
+      "\t{{node.${1:name}}}",
+      "</mat-tree-node>"
+    ],
+    "description": "<mat-tree-node> control"
+  },
+  "matTreeNestedNode": {
+    "prefix": "a-md-tree-nested-node",
+    "body": [
+      "<mat-nested-tree-node *matTreeNodeDef=\"let node; when: ${1:hasChild}\" matTreeNodeToggle [cdkTreeNodeTypeaheadLabel]=\"node.${2:name}\">",
+      "\t<div class=\"mat-tree-node\">",
+      "\t\t<button matIconButton matTreeNodeToggle [attr.aria-label]=\"'Toggle ' + node.${2:name}\">",
+      "\t\t\t<mat-icon class=\"mat-icon-rtl-mirror\">",
+      "\t\t\t\t{{tree.isExpanded(node) ? 'expand_more' : 'chevron_right'}}",
+      "\t\t\t</mat-icon>",
+      "\t\t</button>",
+      "\t\t{{node.${2:name}}}",
+      "\t</div>",
+      "\t<div [class.example-tree-invisible]=\"!tree.isExpanded(node)\" role=\"group\">",
+      "\t\t<ng-container matTreeNodeOutlet></ng-container>",
+      "\t</div>",
+      "</mat-nested-tree-node>"
+    ],
+    "description": "<mat-nested-tree-node> control"
+  },
+  "matChips": {
+    "prefix": "a-md-chips",
+    "body": [
+      "<mat-chip-set>",
+      "\t<mat-chip>${1:val1}</mat-chip>",
+      "\t<mat-chip>${2:val2}</mat-chip>",
+      "</mat-chip-set>"
+    ],
+    "description": "<mat-chip-set> control with <mat-chip>"
+  },
+  "matChip": {
+    "prefix": "a-md-chip",
+    "body": ["<mat-chip>${1:val}</mat-chip>"],
+    "description": "<mat-chip> control for <mat-chip-set>"
+  },
+  "matTable": {
+    "prefix": "a-md-data-table",
+    "body": [
+      "<table mat-table [dataSource]=\"${1:dataSource}\">",
+      "\t<ng-container matColumnDef=\"${2:columnName}\">",
+      "\t\t<th mat-header-cell *matHeaderCellDef>${3:columnHeaderLabel}</th>",
+      "\t\t<td mat-cell *matCellDef=\"let element\">{{element.${4:propertyName}}}</td>",
+      "\t</ng-container>\n",
+      "\t${5:a-md-data-table-column}",
+      "\t<!-- press ctrl + space to add more column snippet or delete this line -->\n",
+      "\t<tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>",
+      "\t<tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>",
+      "</table>"
+    ],
+    "description": "<mat-table> control"
+  },
+  "matTableColumn": {
+    "prefix": "a-md-data-table-column",
+    "body": [
+      "<ng-container matColumnDef=\"${1:columnName}\">",
+      "\t<th mat-header-cell *matHeaderCellDef>${2:columnHeaderLabel}</th>",
+      "\t<td mat-cell *matCellDef=\"let element\">{{element.${3:propertyName}}}</td>",
+      "</ng-container>\n",
+      "${4:a-md-data-table-column}",
+      "<!-- press ctrl + space to add more column snippet or delete this line -->\n"
+    ],
+    "description": "<mat-header-cell> column for </mat-table> control "
+  },
+  "matIcon": {
+    "prefix": "a-md-icon",
+    "body": [
+      "<mat-icon aria-hidden=\"false\" aria-label=\"${2:label} icon\" fontIcon=\"${1:icon}\"></mat-icon>"
+    ],
+    "description": "mat-icon control"
+  },
+  "matSort": {
+    "prefix": "a-md-sort",
+    "body": ["matSort (matSortChange)=\"${1:methodName}($event)\""],
+    "description": "matSort directive with matSortChange event"
+  },
+  "cdkTree": {
+    "prefix": "a-md-cdk-tree",
+    "body": [
+      "<cdk-tree [dataSource]=\"${1:dataSource}\" [treeControl]=\"${2:treeControl}\">",
+      "\t<cdk-tree-node",
+      "\t\t*cdkTreeNodeDef=\"let node\"",
+      "\t\tcdkTreeNodePadding",
+      "\t\t[style.display]=\"${4:shouldRender}(node) ? 'flex' : 'none'\"",
+      "\t\t[isDisabled]=\"!${4:shouldRender}(node)\"",
+      "\t>",
+      "\t\t<button matIconButton disabled></button>",
+      "\t\t{{node.${3:name}}}",
+      "\t</cdk-tree-node>",
+      "\t<cdk-tree-node",
+      "\t\t*cdkTreeNodeDef=\"let node; when: ${5:hasChild}\"",
+      "\t\tcdkTreeNodePadding",
+      "\t\tcdkTreeNodeToggle",
+      "\t\t[cdkTreeNodeTypeaheadLabel]=\"node.${3:name}\"",
+      "\t\t[style.display]=\"${4:shouldRender}(node) ? 'flex' : 'none'\"",
+      "\t\t[isDisabled]=\"!${4:shouldRender}(node)\"",
+      "\t\t(expandedChange)=\"node.isExpanded = $event\"",
+      "\t>",
+      "\t\t<button",
+      "\t\t\tmatIconButton",
+      "\t\t\tcdkTreeNodeToggle",
+      "\t\t\t[attr.aria-label]=\"'Toggle ' + node.${3:name}\"",
+      "\t\t\t[style.visibility]=\"node.expandable ? 'visible' : 'hidden'\"",
+      "\t\t>",
+      "\t\t\t<mat-icon class=\"mat-icon-rtl-mirror\">",
+      "\t\t\t\t{{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}",
+      "\t\t\t</mat-icon>",
+      "\t\t</button>",
+      "\t\t{{node.${3:name}}}",
+      "\t</cdk-tree-node>",
+      "</cdk-tree>"
+    ],
+    "description": "<cdk-tree> control"
+  }
+}

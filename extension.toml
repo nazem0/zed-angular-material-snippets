@@ -1,0 +1,9 @@
+id = "angular-material-snippets"
+name = "Angular Material v22 snippets"
+version = "22.0.0"
+schema_version = 1
+authors = ["hardikpthv"]
+description = "Angular Material v22 HTML and TypeScript snippets (a-md-*). Remake of hardikpthv.AngularMaterial."
+repository = "https://github.com/hardikpthv/vscode-ng-material-snippets"
+
+snippets = ["./snippets/html.json", "./snippets/typescript.json"]
